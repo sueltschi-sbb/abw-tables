@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {delay, map, Observable, of} from "rxjs";
+
+import TableDataJson from './data.json';
 
 export interface TableData {
   recordId: string;
@@ -12,21 +13,19 @@ export interface TableData {
   timestamp: Date;
 }
 
+const data = TableDataJson;
+
 @Injectable({
   providedIn: 'root'
 })
 export class TableDataService {
 
-  private static readonly ENDPOINT = 'https://data.sbb.ch/api/records/1.0/search/?dataset=zugzahlen&q=isb%3DSBB&rows=80&facet=isb&facet=strecke_bezeichnung&facet=strecke_art&facet=bp_von_abschnitt&facet=bp_bis_abschnitt&facet=jahr';
-
-  constructor(private httpClient: HttpClient) {
-  }
-
-  fetchTableData(): Observable<TableData[]> {
-    return this.httpClient.get(TableDataService.ENDPOINT)
-      .pipe(map((data: any) => {
+  fetchTableData(delayMs = 0): Observable<TableData[]> {
+    return of(data).pipe(
+      delay(delayMs),
+      map((data: any) => {
         return data.records.map((record: any) => ({
-          recordId: record.recordid.slice(0, 4),
+          recordId: record.recordid.slice(0, 6),
           line: record.fields.strecke_bezeichnung,
           from: record.fields.bp_von_abschnitt_bezeichnung,
           to: record.fields.bp_bis_abschnitt_bezeichnung,

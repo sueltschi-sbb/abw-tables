@@ -1,8 +1,8 @@
 <h1>Grouped Table</h1>
 
-<abw-table [dataSource]="dataSource" [loading]="loading">
+<abw-table [dataSource]="dataSource">
   <abw-row-group id="groupName" [groupWhen]="isGroupRow"></abw-row-group>
-  <abw-column id="recordId" title="Record ID" width="10%"></abw-column>
+  <abw-column id="recordId" title="ID" width="10%"></abw-column>
   <abw-column id="line" title="Line" width="25%" groupWithNext></abw-column>
   <abw-column id="from" title="From" width="20%" groupWithNext></abw-column>
   <abw-column id="to" title="To" width="20%"></abw-column>

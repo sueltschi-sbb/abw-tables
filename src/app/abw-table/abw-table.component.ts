@@ -7,8 +7,7 @@ import {
   OnInit,
   Output,
   QueryList,
-  ViewChild,
-  ViewEncapsulation
+  ViewChild
 } from '@angular/core';
 import {SbbSort, SbbTableDataSource} from "@sbb-esta/angular/table";
 import {AbwColumnComponent} from "./abw-column/abw-column.component";
@@ -20,7 +19,6 @@ import {AbwRowGroupComponent} from "./abw-column/abw-row-group.component";
   selector: 'abw-table',
   templateUrl: './abw-table.component.html',
   styleUrls: ['./abw-table.component.scss'],
-  encapsulation: ViewEncapsulation.None
 })
 export class AbwTableComponent<T, F extends SbbTableFilter | string> implements OnInit {
 
@@ -44,6 +42,17 @@ export class AbwTableComponent<T, F extends SbbTableFilter | string> implements 
 
   @Input()
   sortColumn = '';
+
+  @Input()
+  get stickyHeader(): boolean {
+    return this._stickyHeader;
+  }
+
+  set stickyHeader(value: unknown) {
+    this._stickyHeader = value !== undefined && value !== false ;
+  }
+
+  private _stickyHeader = false;
 
   @ContentChildren(AbwColumnComponent)
   columns?: QueryList<AbwColumnComponent<T>>;

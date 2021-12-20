@@ -19,8 +19,6 @@ export class GroupedTableComponent {
 
   dataSource: SbbTableDataSource<GroupedTableData> = new SbbTableDataSource();
 
-  loading = true;
-
   constructor(private tableDataService: TableDataService) {
     tableDataService.fetchTableData().subscribe(data => {
       const rows = data.slice(0, 15);
@@ -35,7 +33,6 @@ export class GroupedTableComponent {
       }
 
       this.dataSource.data = groupedRows;
-      this.loading = false;
     })
   }
 

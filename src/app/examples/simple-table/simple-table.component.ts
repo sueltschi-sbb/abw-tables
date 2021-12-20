@@ -12,13 +12,9 @@ export class SimpleTableComponent {
 
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();
 
-  loading = true;
 
   constructor(private tableDataService: TableDataService) {
-    tableDataService.fetchTableData().subscribe(data => {
-      this.dataSource.data = data.slice(0, 15);
-      this.loading = false;
-    })
+    tableDataService.fetchTableData().subscribe(data => this.dataSource.data = data.slice(0, 15))
   }
 
   handleRowClick(row: any) {

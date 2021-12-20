@@ -1,10 +1,10 @@
-<h1>Simple Table</h1>
+<h1>Sticky Table</h1>
 
-<abw-table [dataSource]="dataSource" (rowClick)="handleRowClick($event)" >
-  <abw-column id="recordId" title="ID" width="10%"></abw-column>
+<abw-table [dataSource]="dataSource" [pageSize]="30" stickyHeader>
+  <abw-column id="recordId" title="ID" width="10%" sticky></abw-column>
   <abw-column id="line" title="Line" width="25%"></abw-column>
   <abw-column id="from" title="From" width="20%"></abw-column>
   <abw-column id="to" title="To" width="20%"></abw-column>
-  <abw-column id="year" title="Year" width="10%"></abw-column>
   <abw-column id="countTrains" title="Train Count" width="15%" justify="right"></abw-column>
+  <abw-column id="year" title="Year" width="10%" stickyEnd></abw-column>
 </abw-table>

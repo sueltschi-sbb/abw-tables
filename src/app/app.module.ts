@@ -27,6 +27,10 @@ import {SbbLoadingModule} from "@sbb-esta/angular/loading";
 import {GroupedTableComponent} from './examples/grouped-table/grouped-table.component';
 import {FormattedTableComponent} from './examples/formated-table/formatted-table.component';
 import {FilterableTableComponent} from './examples/filterable-table/filterable-table.component';
+import {StickyTableComponent} from './examples/sticky-table/sticky-table.component';
+import {
+  FullFeatureTableComponent
+} from './examples/full-feature-table/full-feature-table.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,8 @@ import {FilterableTableComponent} from './examples/filterable-table/filterable-t
     GroupedTableComponent,
     FormattedTableComponent,
     FilterableTableComponent,
+    StickyTableComponent,
+    FullFeatureTableComponent,
   ],
   imports: [
     BrowserModule,

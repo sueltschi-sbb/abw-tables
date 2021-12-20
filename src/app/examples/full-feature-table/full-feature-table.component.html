@@ -1,0 +1,25 @@
+<h1>Full Feature Table</h1>
+
+<abw-table [dataSource]="dataSource" [loading]="loading" [pageSize]="30" stickyHeader sortColumn="countTrains" sortDirection="desc" [formGroup]="filter">
+  <abw-column id="recordId" title="ID" width="10%" sticky></abw-column>
+  <abw-column id="line" title="Line" width="20%" sortable>
+    <ng-template abwColumnFilter>
+      <input sbbInput formControlName="line"/>
+    </ng-template>
+  </abw-column>
+  <abw-column id="from" title="From" width="20%" sortable>
+    <ng-template abwColumnFilter>
+      <input sbbInput formControlName="from"/>
+    </ng-template>
+  </abw-column>
+  <abw-column id="to" title="To" width="20%" sortable>
+    <ng-template abwColumnFilter>
+      <input sbbInput formControlName="to"/>
+    </ng-template>
+  </abw-column>
+  <abw-column id="year" title="Year" width="5%"></abw-column>
+  <abw-column id="timestamp" title="Timestamp" width="10%">
+    <ng-template abwColumnCell let-row>{{row.timestamp | date: 'mediumDate'}}</ng-template>
+  </abw-column>
+  <abw-column id="countTrains" title="Train Count" width="15%" justify="right" sortable></abw-column>
+</abw-table>

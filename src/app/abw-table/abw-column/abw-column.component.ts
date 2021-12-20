@@ -48,7 +48,7 @@ export class AbwColumnComponent<T> {
   }
 
   set groupWithNext(value: unknown) {
-    this._groupWithNext = value !== undefined && value !== false ;
+    this._groupWithNext = value !== undefined && value !== false;
   }
 
   private _groupWithNext = false;
@@ -59,9 +59,32 @@ export class AbwColumnComponent<T> {
   }
 
   set sortable(value: unknown) {
-    this._sortable = value !== undefined && value !== false ;
+    this._sortable = value !== undefined && value !== false;
   }
 
   _sortable = false;
+
+
+  @Input()
+  get sticky(): boolean {
+    return this._sticky;
+  }
+
+  set sticky(value: unknown) {
+    this._sticky = value !== undefined && value !== false;
+  }
+
+  private _sticky = false;
+
+  @Input()
+  get stickyEnd(): boolean {
+    return this._stickyEnd;
+  }
+
+  set stickyEnd(value: unknown) {
+    this._stickyEnd = value !== undefined && value !== false;
+  }
+
+  private _stickyEnd = false;
 
 }
