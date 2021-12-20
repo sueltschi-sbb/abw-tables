@@ -1,0 +1,10 @@
+<h1>Simple Table</h1>
+
+<abw-table [dataSource]="dataSource" [loading]="loading" (rowClick)="handleRowClick($event)" >
+  <abw-column id="recordId" title="Record ID" width="10%"></abw-column>
+  <abw-column id="line" title="Line" width="25%"></abw-column>
+  <abw-column id="from" title="From" width="20%"></abw-column>
+  <abw-column id="to" title="To" width="20%"></abw-column>
+  <abw-column id="year" title="Year" width="10%"></abw-column>
+  <abw-column id="countTrains" title="Train Count" width="15%" justify="right"></abw-column>
+</abw-table>

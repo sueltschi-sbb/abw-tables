@@ -1,0 +1,10 @@
+<h1>Paged Table With Sorting</h1>
+
+<abw-table [dataSource]="dataSource" [loading]="loading" [pageSize]="15" sortColumn="countTrains" sortDirection="desc">
+  <abw-column id="recordId" title="Record ID" width="10%"></abw-column>
+  <abw-column id="line" title="Line" width="25%" sortable></abw-column>
+  <abw-column id="from" title="From" width="20%" sortable></abw-column>
+  <abw-column id="to" title="To" width="20%" sortable></abw-column>
+  <abw-column id="year" title="Year" width="10%"></abw-column>
+  <abw-column id="countTrains" title="Train Count" width="15%" justify="right" sortable></abw-column>
+</abw-table>
