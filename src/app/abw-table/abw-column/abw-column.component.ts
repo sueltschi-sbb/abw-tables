@@ -28,7 +28,7 @@ export class AbwColumnComponent<T> {
   subtitle?: string;
 
   @Input()
-  justify?: 'left' | 'right';
+  justify?: 'left' | 'right' | 'center';
 
   @Input()
   width?: string;
