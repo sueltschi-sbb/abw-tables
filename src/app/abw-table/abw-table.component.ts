@@ -7,13 +7,13 @@ import {
   OnInit,
   Output,
   QueryList,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import {SbbSort, SbbTableDataSource} from "@sbb-esta/angular/table";
-import {AbwColumnComponent} from "./abw-column/abw-column.component";
-import {SbbTableFilter} from "@sbb-esta/angular/table/table/table-data-source";
-import {SbbPaginator} from "@sbb-esta/angular/pagination";
-import {AbwRowGroupComponent} from "./abw-column/abw-row-group.component";
+import { SbbSort, SbbTableDataSource } from '@sbb-esta/angular/table';
+import { AbwColumnComponent } from './abw-column/abw-column.component';
+import { SbbTableFilter } from '@sbb-esta/angular/table/table/table-data-source';
+import { SbbPaginator } from '@sbb-esta/angular/pagination';
+import { AbwRowGroupComponent } from './abw-column/abw-row-group.component';
 
 @Component({
   selector: 'abw-table',
@@ -21,7 +21,6 @@ import {AbwRowGroupComponent} from "./abw-column/abw-row-group.component";
   styleUrls: ['./abw-table.component.scss'],
 })
 export class AbwTableComponent<T, F extends SbbTableFilter | string> implements OnInit {
-
   @Output()
   rowClick = new EventEmitter<T>();
 
@@ -49,7 +48,7 @@ export class AbwTableComponent<T, F extends SbbTableFilter | string> implements 
   }
 
   set stickyHeader(value: unknown) {
-    this._stickyHeader = value !== undefined && value !== false ;
+    this._stickyHeader = value !== undefined && value !== false;
   }
 
   private _stickyHeader = false;
@@ -60,24 +59,24 @@ export class AbwTableComponent<T, F extends SbbTableFilter | string> implements 
   @ContentChild(AbwRowGroupComponent)
   rowGroup?: AbwRowGroupComponent<T>;
 
-  @ViewChild(SbbPaginator, {static: true}) paginator?: SbbPaginator;
+  @ViewChild(SbbPaginator, { static: true }) paginator?: SbbPaginator;
 
-  @ViewChild(SbbSort, {static: true}) sort?: SbbSort;
+  @ViewChild(SbbSort, { static: true }) sort?: SbbSort;
 
   get columnNames(): string[] {
-    return this.columns?.map(c => c.id) ?? [];
+    return this.columns?.map((c) => c.id) ?? [];
   }
 
   get hasFilterColumns(): boolean {
-    return this.columns?.some(c => !!c.columnFilterDirective) ?? false;
+    return this.columns?.some((c) => !!c.columnFilterDirective) ?? false;
   }
 
   get filterColumnNames(): string[] {
-    return this.columns?.map(c => `${c.id}-filter`) ?? [];
+    return this.columns?.map((c) => `${c.id}-filter`) ?? [];
   }
 
   get filterColumns(): Iterable<AbwColumnComponent<T>> {
-    return this.columns?.filter(c => !!c.columnFilterDirective) ?? [] ;
+    return this.columns?.filter((c) => !!c.columnFilterDirective) ?? [];
   }
 
   ngOnInit() {
@@ -94,12 +93,10 @@ export class AbwTableComponent<T, F extends SbbTableFilter | string> implements 
       return undefined;
     }
 
-    return typeof cellClass === 'string' ? cellClass : cellClass(element)
+    return typeof cellClass === 'string' ? cellClass : cellClass(element);
   }
 
   handleRowClick(row: T) {
     this.rowClick.next(row);
   }
-
 }
-

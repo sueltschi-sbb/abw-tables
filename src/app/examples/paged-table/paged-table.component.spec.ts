@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {PagedTableComponent} from './paged-table.component';
+import { PagedTableComponent } from './paged-table.component';
 
 describe('PagedTableComponent', () => {
   let component: PagedTableComponent;
@@ -8,9 +8,8 @@ describe('PagedTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PagedTableComponent ]
-    })
-    .compileComponents();
+      declarations: [PagedTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {delay, map, Observable, of} from "rxjs";
+import { Injectable } from '@angular/core';
+import { delay, map, Observable, of } from 'rxjs';
 
 import TableDataJson from './data.json';
 
@@ -16,10 +16,9 @@ export interface TableData {
 const data = TableDataJson;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TableDataService {
-
   fetchTableData(delayMs = 0): Observable<TableData[]> {
     return of(data).pipe(
       delay(delayMs),
@@ -33,7 +32,7 @@ export class TableDataService {
           countTrains: +record.fields.anzahl_zuege,
           timestamp: new Date(record.record_timestamp),
         }));
-      }));
+      })
+    );
   }
-
 }

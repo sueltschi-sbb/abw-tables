@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {FormattedTableComponent} from './formatted-table.component';
+import { FormattedTableComponent } from './formatted-table.component';
 
 describe('FormatedTableComponent', () => {
   let component: FormattedTableComponent;
@@ -8,9 +8,8 @@ describe('FormatedTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormattedTableComponent ]
-    })
-    .compileComponents();
+      declarations: [FormattedTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

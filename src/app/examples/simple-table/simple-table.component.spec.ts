@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {SimpleTableComponent} from './simple-table.component';
+import { SimpleTableComponent } from './simple-table.component';
 
 describe('SimpleTableComponent', () => {
   let component: SimpleTableComponent;
@@ -8,9 +8,8 @@ describe('SimpleTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SimpleTableComponent ]
-    })
-    .compileComponents();
+      declarations: [SimpleTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

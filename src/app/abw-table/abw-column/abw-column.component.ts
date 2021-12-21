@@ -1,14 +1,13 @@
-import {Component, ContentChild, Input} from '@angular/core';
-import {AbwColumnHeaderDirective} from "./abw-column-header.directive";
-import {AbwColumnCellDirective} from "./abw-column-cell.directive";
-import {AbwColumnFilterDirective} from "./abw-column-filter.directive";
+import { Component, ContentChild, Input } from '@angular/core';
+import { AbwColumnHeaderDirective } from './abw-column-header.directive';
+import { AbwColumnCellDirective } from './abw-column-cell.directive';
+import { AbwColumnFilterDirective } from './abw-column-filter.directive';
 
 @Component({
   selector: 'abw-column',
   template: '',
 })
 export class AbwColumnComponent<T> {
-
   @ContentChild(AbwColumnHeaderDirective)
   columnHeaderDirective!: AbwColumnHeaderDirective;
 
@@ -64,7 +63,6 @@ export class AbwColumnComponent<T> {
 
   _sortable = false;
 
-
   @Input()
   get sticky(): boolean {
     return this._sticky;
@@ -86,5 +84,4 @@ export class AbwColumnComponent<T> {
   }
 
   private _stickyEnd = false;
-
 }

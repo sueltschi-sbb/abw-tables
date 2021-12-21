@@ -1,14 +1,13 @@
-import {Component, ContentChild, Input} from '@angular/core';
-import {AbwColumnCellDirective} from "./abw-column-cell.directive";
+import { Component, ContentChild, Input } from '@angular/core';
+import { AbwColumnCellDirective } from './abw-column-cell.directive';
 
 @Component({
   selector: 'abw-row-group',
   template: '',
 })
 export class AbwRowGroupComponent<T> {
-
   @Input()
-  groupWhen!: (index: number, rowData: T) => boolean
+  groupWhen!: (index: number, rowData: T) => boolean;
 
   @Input()
   id!: string;
@@ -21,6 +20,4 @@ export class AbwRowGroupComponent<T> {
 
   @ContentChild(AbwColumnCellDirective)
   columnCellDirective!: AbwColumnCellDirective<T>;
-
 }
-

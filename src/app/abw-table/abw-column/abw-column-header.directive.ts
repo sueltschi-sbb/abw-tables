@@ -1,10 +1,8 @@
-import {Directive, TemplateRef} from '@angular/core';
+import { Directive, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[abwColumnHeader]'
+  selector: '[abwColumnHeader]',
 })
 export class AbwColumnHeaderDirective {
-
-  constructor(public readonly template: TemplateRef<unknown>) { }
-
+  constructor(public readonly template: TemplateRef<unknown>) {}
 }

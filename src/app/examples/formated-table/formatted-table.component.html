@@ -7,6 +7,6 @@
   <abw-column id="year" title="Year" width="10%"></abw-column>
   <abw-column id="timestamp" title="Date" width="15%" justify="right">
     <ng-template abwColumnHeader>📅 Date</ng-template>
-    <ng-template abwColumnCell let-row>📅 {{row.timestamp | date: 'longDate'}}</ng-template>
+    <ng-template abwColumnCell let-row>📅 {{ row.timestamp | date: "longDate" }}</ng-template>
   </abw-column>
 </abw-table>

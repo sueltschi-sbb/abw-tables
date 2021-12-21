@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {FilterableTableComponent} from './filterable-table.component';
+import { FilterableTableComponent } from './filterable-table.component';
 
 describe('FilterableTableComponent', () => {
   let component: FilterableTableComponent;
@@ -8,9 +8,8 @@ describe('FilterableTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilterableTableComponent ]
-    })
-    .compileComponents();
+      declarations: [FilterableTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {GroupedTableComponent} from './grouped-table.component';
+import { GroupedTableComponent } from './grouped-table.component';
 
 describe('GroupedTableComponent', () => {
   let component: GroupedTableComponent;
@@ -8,9 +8,8 @@ describe('GroupedTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GroupedTableComponent ]
-    })
-    .compileComponents();
+      declarations: [GroupedTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

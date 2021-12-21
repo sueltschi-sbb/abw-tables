@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {FullFeatureTableComponent} from './full-feature-table.component';
+import { FullFeatureTableComponent } from './full-feature-table.component';
 
 describe('FullFeatureTableComponent', () => {
   let component: FullFeatureTableComponent;
@@ -8,9 +8,8 @@ describe('FullFeatureTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FullFeatureTableComponent ]
-    })
-    .compileComponents();
+      declarations: [FullFeatureTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

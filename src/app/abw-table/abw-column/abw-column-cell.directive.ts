@@ -1,10 +1,8 @@
-import {Directive, TemplateRef} from '@angular/core';
+import { Directive, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[abwColumnCell]'
+  selector: '[abwColumnCell]',
 })
 export class AbwColumnCellDirective<T> {
-
-  constructor(public readonly template: TemplateRef<T>) { }
-
+  constructor(public readonly template: TemplateRef<T>) {}
 }

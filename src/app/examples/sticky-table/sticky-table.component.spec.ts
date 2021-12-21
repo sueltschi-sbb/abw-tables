@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {StickyTableComponent} from './sticky-table.component';
+import { StickyTableComponent } from './sticky-table.component';
 
 describe('StickyTableComponent', () => {
   let component: StickyTableComponent;
@@ -8,9 +8,8 @@ describe('StickyTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StickyTableComponent ]
-    })
-    .compileComponents();
+      declarations: [StickyTableComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
