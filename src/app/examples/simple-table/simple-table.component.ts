@@ -14,7 +14,7 @@ export class SimpleTableComponent {
     tableDataService.fetchTableData().subscribe((data) => (this.dataSource.data = data.slice(0, 15)));
   }
 
-  handleRowClick(row: any) {
+  handleRowClick(row: TableData) {
     console.log('row clicked', row);
   }
 }
