@@ -12,7 +12,6 @@ type GroupedTableData = TableData | GroupRow;
   selector: 'abw-grouped-table',
   templateUrl: './grouped-table.component.html',
   styleUrls: ['./grouped-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class GroupedTableComponent {
   dataSource: SbbTableDataSource<GroupedTableData> = new SbbTableDataSource();

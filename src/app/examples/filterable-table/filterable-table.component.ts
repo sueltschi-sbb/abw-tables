@@ -8,7 +8,6 @@ import { Subject, takeUntil } from 'rxjs';
   selector: 'abw-filterable-table',
   templateUrl: './filterable-table.component.html',
   styleUrls: ['./filterable-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class FilterableTableComponent implements OnDestroy {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();

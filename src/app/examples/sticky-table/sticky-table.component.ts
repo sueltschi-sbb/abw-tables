@@ -6,7 +6,6 @@ import { TableData, TableDataService } from '../table-data.service';
   selector: 'abw-sticky-table',
   templateUrl: './sticky-table.component.html',
   styleUrls: ['./sticky-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class StickyTableComponent {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();

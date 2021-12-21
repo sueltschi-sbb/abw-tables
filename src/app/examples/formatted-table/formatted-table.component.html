@@ -1,0 +1,13 @@
+<abw-example-page title="Formatted Table" sourceCodePath="src/app/examples/formatted-table">
+  <abw-table [dataSource]="dataSource">
+    <abw-column id="recordId" title="ID" width="10%" headerClass="record-header"></abw-column>
+    <abw-column id="line" title="Line" width="25%" cellClass="line-cell"></abw-column>
+    <abw-column id="from" title="From" subtitle="origin" width="20%"></abw-column>
+    <abw-column id="to" title="To" subtitle="destination" width="20%"></abw-column>
+    <abw-column id="year" title="Year" width="10%"></abw-column>
+    <abw-column id="timestamp" title="Date" width="15%" justify="right">
+      <ng-template abwColumnHeader>📅 Date</ng-template>
+      <ng-template abwColumnCell let-row>📅 {{ row.timestamp | date: "longDate" }}</ng-template>
+    </abw-column>
+  </abw-table>
+</abw-example-page>

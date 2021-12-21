@@ -6,7 +6,6 @@ import { TableData, TableDataService } from '../table-data.service';
   selector: 'abw-simple-table',
   templateUrl: './simple-table.component.html',
   styleUrls: ['./simple-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class SimpleTableComponent {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();

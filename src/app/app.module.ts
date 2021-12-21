@@ -25,10 +25,11 @@ import { SbbAccordionModule } from '@sbb-esta/angular/accordion';
 import { PagedTableComponent } from './examples/paged-table/paged-table.component';
 import { SbbLoadingModule } from '@sbb-esta/angular/loading';
 import { GroupedTableComponent } from './examples/grouped-table/grouped-table.component';
-import { FormattedTableComponent } from './examples/formated-table/formatted-table.component';
+import { FormattedTableComponent } from './examples/formatted-table/formatted-table.component';
 import { FilterableTableComponent } from './examples/filterable-table/filterable-table.component';
 import { StickyTableComponent } from './examples/sticky-table/sticky-table.component';
 import { FullFeatureTableComponent } from './examples/full-feature-table/full-feature-table.component';
+import { ExamplePageComponent } from './examples/example-page/example-page.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FullFeatureTableComponent } from './examples/full-feature-table/full-fe
     FilterableTableComponent,
     StickyTableComponent,
     FullFeatureTableComponent,
+    ExamplePageComponent,
   ],
   imports: [
     BrowserModule,

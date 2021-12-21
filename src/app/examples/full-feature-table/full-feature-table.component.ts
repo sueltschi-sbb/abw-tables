@@ -8,7 +8,6 @@ import { Subject, takeUntil } from 'rxjs';
   selector: 'abw-full-feature-table',
   templateUrl: './full-feature-table.component.html',
   styleUrls: ['./full-feature-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class FullFeatureTableComponent implements OnDestroy {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();

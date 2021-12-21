@@ -6,7 +6,6 @@ import { TableData, TableDataService } from '../table-data.service';
   selector: 'abw-formatted-table',
   templateUrl: './formatted-table.component.html',
   styleUrls: ['./formatted-table.component.scss'],
-  host: { class: 'content content-full-height' },
 })
 export class FormattedTableComponent {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();

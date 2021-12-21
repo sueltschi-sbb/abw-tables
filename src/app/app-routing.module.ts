@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SimpleTableComponent } from './examples/simple-table/simple-table.component';
 import { PagedTableComponent } from './examples/paged-table/paged-table.component';
 import { GroupedTableComponent } from './examples/grouped-table/grouped-table.component';
-import { FormattedTableComponent } from './examples/formated-table/formatted-table.component';
+import { FormattedTableComponent } from './examples/formatted-table/formatted-table.component';
 import { FilterableTableComponent } from './examples/filterable-table/filterable-table.component';
 import { StickyTableComponent } from './examples/sticky-table/sticky-table.component';
 import { FullFeatureTableComponent } from './examples/full-feature-table/full-feature-table.component';
