@@ -111,7 +111,7 @@
       ></tr>
     </ng-template>
   </table>
-  <sbb-loading mode="fullbox" *ngIf="loading"></sbb-loading>
+  <sbb-loading mode="fullbox" *ngIf="loading || (dataSource.loading | async) === true"></sbb-loading>
 </sbb-table-wrapper>
 
 <p *ngIf="dataSource.filteredData.length === 0 && !loading">

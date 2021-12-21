@@ -11,8 +11,6 @@ export class StickyTableComponent {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();
 
   constructor(private tableDataService: TableDataService) {
-    tableDataService.fetchTableData().subscribe((data) => {
-      this.dataSource.data = data;
-    });
+    this.dataSource.data = this.tableDataService.data;
   }
 }

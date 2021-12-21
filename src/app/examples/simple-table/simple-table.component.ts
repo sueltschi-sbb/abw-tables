@@ -11,7 +11,7 @@ export class SimpleTableComponent {
   dataSource: SbbTableDataSource<TableData> = new SbbTableDataSource();
 
   constructor(private tableDataService: TableDataService) {
-    tableDataService.fetchTableData().subscribe((data) => (this.dataSource.data = data.slice(0, 15)));
+    this.dataSource.data = this.tableDataService.data.slice(0, 15);
   }
 
   handleRowClick(row: TableData) {

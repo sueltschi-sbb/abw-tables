@@ -7,6 +7,7 @@ import { FormattedTableComponent } from './examples/formatted-table/formatted-ta
 import { FilterableTableComponent } from './examples/filterable-table/filterable-table.component';
 import { StickyTableComponent } from './examples/sticky-table/sticky-table.component';
 import { FullFeatureTableComponent } from './examples/full-feature-table/full-feature-table.component';
+import { RemoteTableComponent } from './examples/remote-table/remote-table.component';
 
 const routes: Routes = [
   { path: 'simple', component: SimpleTableComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'filterable', component: FilterableTableComponent },
   { path: 'sticky', component: StickyTableComponent },
   { path: 'full', component: FullFeatureTableComponent },
+  { path: 'remote', component: RemoteTableComponent },
   { path: '', redirectTo: '/simple', pathMatch: 'full' },
 ];
 

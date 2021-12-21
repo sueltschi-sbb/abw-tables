@@ -22,7 +22,7 @@ export class FilterableTableComponent implements OnDestroy {
   });
 
   constructor(private tableDataService: TableDataService) {
-    tableDataService.fetchTableData().subscribe((data) => (this.dataSource.data = data));
+    this.dataSource.data = tableDataService.data;
 
     this.filter.valueChanges
       .pipe(takeUntil(this.destroyed))

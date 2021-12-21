@@ -1,0 +1,14 @@
+<abw-example-page title="Remote Table" sourceCodePath="src/app/examples/remote-table">
+  <sbb-search (search)="handleSearch($event)">
+    <input sbbInput placeholder="Search by ID, Line, From, To" />
+  </sbb-search>
+
+  <abw-table [dataSource]="dataSource" [pageSize]="25" stickyHeader sortColumn="countTrains" sortDirection="desc">
+    <abw-column id="recordId" title="ID" width="10%" sticky></abw-column>
+    <abw-column id="line" title="Line" width="20%" sortable></abw-column>
+    <abw-column id="from" title="From" width="20%" sortable></abw-column>
+    <abw-column id="to" title="To" width="20%" sortable></abw-column>
+    <abw-column id="year" title="Year" width="10%"></abw-column>
+    <abw-column id="countTrains" title="Train Count" width="20%" justify="right" sortable></abw-column>
+  </abw-table>
+</abw-example-page>

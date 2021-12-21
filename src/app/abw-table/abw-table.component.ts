@@ -9,11 +9,33 @@ import {
   QueryList,
   ViewChild,
 } from '@angular/core';
-import { SbbSort, SbbTableDataSource } from '@sbb-esta/angular/table';
+import { SbbSort } from '@sbb-esta/angular/table';
 import { AbwColumnComponent } from './abw-column/abw-column.component';
 import { SbbTableFilter } from '@sbb-esta/angular/table/table/table-data-source';
 import { SbbPaginator } from '@sbb-esta/angular/pagination';
 import { AbwRowGroupComponent } from './abw-column/abw-row-group.component';
+import { CollectionViewer } from '@angular/cdk/collections/collection-viewer';
+import { Observable } from 'rxjs';
+
+export interface AbwTableDataSource<T, F extends SbbTableFilter | string = string> {
+  connect(collectionViewer: CollectionViewer): Observable<T[]>;
+
+  disconnect(collectionViewer: CollectionViewer): void;
+
+  get sort(): SbbSort | null;
+
+  set sort(sort: SbbSort | null);
+
+  get paginator(): SbbPaginator | null;
+
+  set paginator(paginator: SbbPaginator | null);
+
+  set filter(filter: F);
+
+  get filteredData(): T[];
+
+  loading?: Observable<boolean>;
+}
 
 @Component({
   selector: 'abw-table',
@@ -25,7 +47,7 @@ export class AbwTableComponent<T, F extends SbbTableFilter | string> implements 
   rowClick = new EventEmitter<T>();
 
   @Input()
-  dataSource!: SbbTableDataSource<T, F>;
+  dataSource!: AbwTableDataSource<T, F>;
 
   @Input()
   pageSize?: number;

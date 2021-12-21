@@ -22,6 +22,8 @@ import { ExamplePageComponent } from './examples/example-page/example-page.compo
 import { SbbButtonModule } from '@sbb-esta/angular/button';
 import { AbwTableModule } from './abw-table/abw-table.module';
 import { SbbIconModule } from '@sbb-esta/angular/icon';
+import { RemoteTableComponent } from './examples/remote-table/remote-table.component';
+import { SbbSearchModule } from '@sbb-esta/angular/search';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { SbbIconModule } from '@sbb-esta/angular/icon';
     FilterableTableComponent,
     StickyTableComponent,
     FullFeatureTableComponent,
+    RemoteTableComponent,
     ExamplePageComponent,
   ],
   imports: [
@@ -49,6 +52,7 @@ import { SbbIconModule } from '@sbb-esta/angular/icon';
     SbbAccordionModule,
     SbbButtonModule,
     AbwTableModule,
+    SbbSearchModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
