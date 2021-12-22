@@ -1,28 +1,26 @@
-<abw-example-page title="Filterable Table" sourceCodePath="src/app/examples/filterable-table">
-  <ng-container [formGroup]="filter">
-    <sbb-form-field label="Global Search">
-      <input sbbInput formControlName="_" />
-    </sbb-form-field>
+<abw-example-page title="Filterable Table" sourceCodePath="src/app/examples/filterable-table" [formGroup]="filter">
+  <sbb-form-field label="Global Search">
+    <input sbbInput formControlName="_" />
+  </sbb-form-field>
 
-    <abw-table [dataSource]="dataSource" [pageSize]="15" noDataText="no rows match the filter">
-      <abw-column id="recordId" title="ID" width="10%"></abw-column>
-      <abw-column id="line" title="Line" width="25%" sortable>
-        <ng-template abwColumnFilter>
-          <input sbbInput formControlName="line" />
-        </ng-template>
-      </abw-column>
-      <abw-column id="from" title="From" width="20%">
-        <ng-template abwColumnFilter>
-          <input sbbInput formControlName="from" />
-        </ng-template>
-      </abw-column>
-      <abw-column id="to" title="To" width="20%">
-        <ng-template abwColumnFilter>
-          <input sbbInput formControlName="to" />
-        </ng-template>
-      </abw-column>
-      <abw-column id="year" title="Year" width="10%"></abw-column>
-      <abw-column id="countTrains" title="Train Count" width="15%" justify="right"></abw-column>
-    </abw-table>
-  </ng-container>
+  <abw-table [dataSource]="dataSource" [pageSize]="15" noDataText="no rows match the filter">
+    <abw-column id="recordId" title="ID" width="10%"></abw-column>
+    <abw-column id="line" title="Line" width="25%" sortable>
+      <ng-template abwColumnFilter>
+        <input sbbInput formControlName="line" />
+      </ng-template>
+    </abw-column>
+    <abw-column id="from" title="From" width="20%">
+      <ng-template abwColumnFilter>
+        <input sbbInput formControlName="from" />
+      </ng-template>
+    </abw-column>
+    <abw-column id="to" title="To" width="20%">
+      <ng-template abwColumnFilter>
+        <input sbbInput formControlName="to" />
+      </ng-template>
+    </abw-column>
+    <abw-column id="year" title="Year" width="10%"></abw-column>
+    <abw-column id="countTrains" title="Train Count" width="15%" justify="right"></abw-column>
+  </abw-table>
 </abw-example-page>
