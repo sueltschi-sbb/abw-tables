@@ -2,7 +2,7 @@
 
 This is an API wrapper around
 the [@sbb-esta/angular](https://angular.app.sbb.ch/angular/components/table/overview) table
-components that simplify common use cases when dealing with tables in angular:
+components that simplifies common use cases when dealing with tables in angular:
 
 * Paging, Sorting and Filtering
 * Formatting headers and cells
