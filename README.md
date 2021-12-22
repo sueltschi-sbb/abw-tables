@@ -147,7 +147,7 @@ Columns are grouped together with the next column by using the `groupWithNext` a
 
 ### Row Grouping
 
-A row group is defined by `abw-row-group`, the `groupWhen` attribute defined a predicate that
+A row group is defined by `abw-row-group`, the `groupWhen` attribute defines a predicate that
 indicates which rows are row groups.
 
 ```typescript
@@ -159,9 +159,7 @@ interface TableData {
 }
 
 interface TableGroup {
-  id: number;
-  name: string;
-  date: Date;
+  groupName: string;
 }
 
 const data: (TableData | TableGroup)[] = [
