@@ -82,7 +82,7 @@ and `abwColumnCell` directives.
     </ng-template>
   </abw-column>
   <abw-column id="date" title="date" width="10%">
-    <ng-template abwColumnCell let-row>{{ row | date: 'shortDate' }}</ng-template>
+    <ng-template abwColumnCell let-row>{{ row.date | date: 'shortDate' }}</ng-template>
   </abw-column>
 </abw-table>
 ```
